@@ -197,7 +197,7 @@ impl Vm {
                 Some(addr) => self.pc = addr as usize,
             },
             Op::Out(a) => {
-                print!("{}", a as u8 as char);
+                print!("{}", v(a) as u8 as char);
             }
             Op::In(a) => {
                 if self.input.is_empty() {
